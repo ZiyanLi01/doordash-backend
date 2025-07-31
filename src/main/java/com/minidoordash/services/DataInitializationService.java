@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-@Service
+// @Service
 public class DataInitializationService implements CommandLineRunner {
     
     @Autowired
@@ -23,14 +23,22 @@ public class DataInitializationService implements CommandLineRunner {
     
     @Override
     public void run(String... args) throws Exception {
+        // Wait a bit for database to be fully initialized
+        Thread.sleep(2000);
+        
         // Clear existing data and reinitialize with real images
         clearExistingData();
         initializeDemoData();
     }
     
     private void clearExistingData() {
-        menuItemRepository.deleteAll();
-        restaurantRepository.deleteAll();
+        try {
+            menuItemRepository.deleteAll();
+            restaurantRepository.deleteAll();
+        } catch (Exception e) {
+            // Ignore errors when clearing data (e.g., tables don't exist yet)
+            System.out.println("Note: Could not clear existing data: " + e.getMessage());
+        }
     }
     
     private void initializeDemoData() {
