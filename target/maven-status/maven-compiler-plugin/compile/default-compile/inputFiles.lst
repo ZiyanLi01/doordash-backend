@@ -1,0 +1,15 @@
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/controllers/UserController.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/controllers/RestaurantController.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/services/UserService.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/controllers/HealthController.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/repositories/UserRepository.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/controllers/MenuItemController.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/models/MenuItem.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/MiniDoorDashApplication.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/services/DataInitializationService.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/config/DatabaseConfig.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/models/Restaurant.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/repositories/MenuItemRepository.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/models/User.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/repositories/RestaurantRepository.java
+/Users/ziyanli/IdeaProjects/doordash-backend/src/main/java/com/minidoordash/config/SecurityConfig.java

@@ -119,6 +119,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>com.minidoordash.MiniDoorDashApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
