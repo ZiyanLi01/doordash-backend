@@ -10,6 +10,7 @@ com/minidoordash/repositories/UserRepository.class
 com/minidoordash/config/DatabaseConfig.class
 com/minidoordash/controllers/MenuItemController.class
 com/minidoordash/repositories/RestaurantRepository.class
+com/minidoordash/controllers/TestController.class
 com/minidoordash/MiniDoorDashApplication.class
 com/minidoordash/models/Restaurant.class
 com/minidoordash/models/MenuItem.class

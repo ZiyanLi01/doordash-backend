@@ -1,8 +1,6 @@
 target/
-!target/*.jar
-.git
+.git/
 .gitignore
 README.md
-.idea/
-*.iml
-.DS_Store 
+.env
+*.log 

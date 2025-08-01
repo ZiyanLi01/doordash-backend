@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["jdk17", "maven"]
+nixPkgs = ["maven", "openjdk17"]
 
 [phases.install]
 cmds = ["mvn clean package -DskipTests"]
 
 [start]
-cmd = "java -jar target/mini-door-dash-backend-1.0.0.jar" 
+cmd = "java -jar target/mini-door-dash-backend-1.0.0.jar --spring.profiles.active=minimal" 

@@ -19,6 +19,8 @@ spring:
       - org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
       - org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
       - org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
+      - org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
+      - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReportAutoConfiguration
 
 logging:
   level:
@@ -26,5 +28,6 @@ logging:
     com.minidoordash: INFO
     org.springframework.web: INFO
     org.springframework.boot: INFO
+    org.springframework.context: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n" 
