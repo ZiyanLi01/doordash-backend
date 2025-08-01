@@ -29,7 +29,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .authorizeHttpRequests(authz -> authz
-                .requestMatchers("/health").permitAll()
+                .requestMatchers("/health", "/test", "/ping", "/").permitAll()
                 .requestMatchers("/users/register", "/users/login", "/users/check-username", "/users/check-email").permitAll()
                 .requestMatchers("/restaurants/**", "/menu-items/**").permitAll()
                 .requestMatchers("/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
