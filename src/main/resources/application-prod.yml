@@ -56,11 +56,12 @@ springdoc:
 
 logging:
   level:
-    root: WARN
+    root: INFO
     com.minidoordash: INFO
     org.springframework.web: INFO
     org.springframework.boot: INFO
+    org.springframework.security: INFO
     org.hibernate.SQL: WARN
     org.hibernate.type.descriptor.sql.BasicBinder: WARN
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" 
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n" 
