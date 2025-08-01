@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "java -jar target/mini-door-dash-backend-1.0.0.jar --spring.profiles.active=minimal",
+    "startCommand": "java -cp target/classes com.minidoordash.MiniDoorDashApplicationMinimal --spring.profiles.active=minimal",
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 300,
     "healthcheckInterval": 30,
