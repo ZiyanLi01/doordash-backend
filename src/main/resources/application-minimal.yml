@@ -17,6 +17,8 @@ spring:
       - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
       - org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration
       - org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
+      - org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+      - org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
 
 logging:
   level:
