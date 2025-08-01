@@ -19,16 +19,16 @@ import java.util.Properties;
 @PropertySource("classpath:application.yml")
 public class DatabaseConfig {
 
-    @Value("${spring.datasource.url}")
+    @Value("${spring.datasource.url:jdbc:postgresql://db.fbqinbkfgckofqokgevu.supabase.co:5432/postgres?sslmode=require}")
     private String databaseUrl;
 
-    @Value("${spring.datasource.username}")
+    @Value("${spring.datasource.username:postgres}")
     private String databaseUsername;
 
-    @Value("${spring.datasource.password}")
+    @Value("${spring.datasource.password:}")
     private String databasePassword;
 
-    @Value("${spring.datasource.driver-class-name}")
+    @Value("${spring.datasource.driver-class-name:org.postgresql.Driver}")
     private String databaseDriver;
 
     @Bean

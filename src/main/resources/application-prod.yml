@@ -6,6 +6,10 @@ server:
 spring:
   application:
     name: mini-door-dash-backend
+  
+  # Temporary disable database for deployment testing
+  # autoconfigure:
+  #   exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
 
   datasource:
     url: ${SUPABASE_DB_URL:jdbc:postgresql://db.fbqinbkfgckofqokgevu.supabase.co:5432/postgres?sslmode=require}
@@ -54,6 +58,9 @@ springdoc:
     path: /swagger-ui.html
     operations-sorter: method
 
+# Enable debug mode for deployment troubleshooting
+debug: true
+
 logging:
   level:
     root: INFO
@@ -61,6 +68,7 @@ logging:
     org.springframework.web: INFO
     org.springframework.boot: INFO
     org.springframework.security: INFO
+    org.springframework.context.annotation.ConditionEvaluationReportLoggingListener: DEBUG
     org.hibernate.SQL: WARN
     org.hibernate.type.descriptor.sql.BasicBinder: WARN
   pattern:
