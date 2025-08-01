@@ -1,0 +1,66 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: mini-door-dash-backend
+
+  datasource:
+    url: ${SUPABASE_DB_URL:jdbc:postgresql://db.fbqinbkfgckofqokgevu.supabase.co:5432/postgres?sslmode=require}
+    username: ${SUPABASE_DB_USER:postgres}
+    password: ${SUPABASE_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+        use_sql_comments: false
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+
+  security:
+    user:
+      name: admin
+      password: admin
+
+supabase:
+  url: ${SUPABASE_URL:https://fbqinbkfgckofqokgevu.supabase.co}
+  anon-key: ${SUPABASE_ANON_KEY}
+  service-key: ${SUPABASE_SERVICE_KEY}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
+logging:
+  level:
+    root: WARN
+    com.minidoordash: INFO
+    org.springframework.web: INFO
+    org.springframework.boot: INFO
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" 
